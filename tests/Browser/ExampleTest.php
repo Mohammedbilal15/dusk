@@ -28,5 +28,19 @@ class ExampleTest extends DuskTestCase
                     ->press('LOGIN')
                     ->assertPathIs('/dashboard');
         });
+/*  $this->browse(function ($first, $second) {
+            $first->loginAs(User::find(1))
+                  ->visit('/dashboard')
+                  ->waitForText('Message');
+        
+            $second->loginAs(User::find(2))
+                   ->visit('/dashboard')
+                   ->waitForText('Message')
+                   ->type('message', 'Hey Taylor')
+                   ->press('Send');
+        
+            $first->waitForText('Hey Taylor')
+                  ->assertSee('Jeffrey Way');
+        });*/
     }
 }
